@@ -1,17 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Footer from '../comps/Footer'
-import Navbar from '../comps/Navbar'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
 import { useEffect, useState } from 'react'
-
-
+import Link from 'next/link';
+import styles from '../../styles/Mensen.module.css'
+import Location from '../../comps/Location';
 
 
 
 const Mensen = () => {
-
     const [mensen, setMensen] = useState([]);
     const [location, setLocation] = useState();
 
@@ -39,23 +33,10 @@ const Mensen = () => {
     }, [location]);
     
     return ( 
-      <>
-      
-      <Head>
-        <title>HTW Mensa | Home</title>
-        <meta name="keywords" content="mensa"/>
-      </Head>
-      <div>
-        <h1 className={styles.title}>Homepage </h1>
-        <p className={styles.text}>This is the homepage</p>
-        <Link href='/mensen'><a className={styles.btn}>See Mensen Listing</a></Link>
-      </div>
-
-        
         <div>
-            <h1>Alle Mensen in der Nähe</h1>
-            
-            
+            <h1>Alle Mensen</h1>
+            <p>Alle Mensen</p>
+            <Location />
             {mensen?.length > 0 && mensen.map(mensa => ( 
                 <Link href={`/mensen/${mensa.id}`} key={mensa.id}>
                     <a className={styles.single}> 
@@ -64,7 +45,6 @@ const Mensen = () => {
                 </Link>
             ))}
         </div>
-      </>
     );
 };
 
