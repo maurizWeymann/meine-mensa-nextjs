@@ -3,6 +3,8 @@ import Image from 'next/image';
 
 
 const Navbar = () => {
+
+    
     return ( 
         <nav >
             <div className="logo">
