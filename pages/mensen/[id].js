@@ -6,6 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import DailyMenu from '../../comps/DailyMenu';
 
 
 export const getStaticPaths = async () => {
@@ -38,25 +39,27 @@ const Details = ({ mensa }) => {
   return (
     <div>
       <Card sx={{ maxWidth: 1024 }}>
-                            <CardMedia
-                                component="img"
-                                height="180"
-                                image={`/mensafotos/${mensa.id}.jpg`}
-                                alt={mensa.name}
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                {mensa.name}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                {mensa.address}
-                                </Typography>
-                            </CardContent>
-                            <CardActions>
-                                <Button size="small">Share</Button>
-                                <Button size="small">Learn More</Button>
-                            </CardActions>
-                        </Card>
+      <CardMedia
+        component="img"
+        height="180"
+        image={`/mensafotos/${mensa.id}.jpg`}
+        alt={mensa.name}
+        />
+        <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        {mensa.name}
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        {mensa.address}
+        </Typography>
+        </CardContent>
+        <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+        </CardActions>
+                         
+        <DailyMenu />
+        </Card>
   
     </div>
   )
