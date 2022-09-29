@@ -15,12 +15,15 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Image from 'next/image';
 import Link from 'next/link'
 
+import {useSession, signIn,signOut} from 'next-auth/react'
+import { loadGetInitialProps } from "next/dist/shared/lib/utils";
+import styles from '../styles/Home.module.css'
 
-
+  
 const pages = [
   {
     title: 'Home',
-    href : '/'
+    href : '/'  
   }, 
   {
     title: 'Mensen',
@@ -31,11 +34,13 @@ const pages = [
     href : '/about'
   }
 ];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = [{linkName: 'Profile', toDo: ""}, {linkName: 'Account', toDo: ""},{linkName: 'Dashboard', toDo: ""}, {linkName:'Logout', toDo: ""}];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
+
+  const {data: session} = useSession({required: true})
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -52,7 +57,11 @@ const ResponsiveAppBar = () => {
     setAnchorElUser(null);
   };
 
+
   return (
+
+
+
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -150,7 +159,9 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <img src= {session ? session.user.image : "/static/images/avatar/2.jpg"} alt="" style={{width: '65px', borderRadius:'50px'}}/>
+              
+              
               </IconButton>
             </Tooltip>
             <Menu
@@ -170,8 +181,8 @@ const ResponsiveAppBar = () => {
               onClose={handleCloseUserMenu}
             >
               {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
+                <MenuItem key={setting.linkName} onClick={handleCloseUserMenu }>
+                  <Typography textAlign="center" onClick={() => signOut()}>{setting.linkName}</Typography>
                 </MenuItem>
               ))}
             </Menu>
