@@ -4,8 +4,8 @@
     "display": "standalone",
     "scope": "/",
     "start_url": "/",
-    "name": "PWA HTW Mensa",
-    "short_name": "HTW Mensa",
+    "name": "Mensa Group 3",
+    "short_name": "meineMensa",
     "icons": [
         {
             "src": "/icon-192x192.png",
