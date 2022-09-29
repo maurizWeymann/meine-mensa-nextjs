@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import styles from '../../styles/Mensen.module.css'
 import Link from "next/link";
+import Image from 'next/image';
+
 
 export const getStaticProps = async () => {
     const res = await fetch('https://openmensa.org/api/v2/canteens');
@@ -8,6 +10,7 @@ export const getStaticProps = async () => {
     
     return { props: { mensen: data } }
 }
+
 
 
 
@@ -23,9 +26,17 @@ const Mensen = ({mensen}) => {
         <div>
             <h1>Alle Mensen</h1>
             <p>Alle Mensen</p>
+
+            
+             
             {mensen.slice(0,25).map(mensa => ( 
-                <Link href ={'/mensen/' + mensa.id}key={mensa.id}>
-                    <a className={styles.single}> 
+                            
+                             
+                <Link href ={'/mensen/' + mensa.id} key={mensa.id}>
+                   <a className={styles.single}> 
+
+                    <Image src={`/mensafotos/${mensa.id}.jpg`} alt={mensa.name} width={128} height={77} />
+
                         <h2>{mensa.name}</h2>
                         <h4>{mensa.address}</h4>
                         <h4>{mensa.city}</h4>
@@ -35,7 +46,6 @@ const Mensen = ({mensen}) => {
         </>
      );
 }
-
 // index.js will create route to the root page
  
 export default Mensen;
