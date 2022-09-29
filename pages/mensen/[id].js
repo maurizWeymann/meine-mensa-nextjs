@@ -8,7 +8,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import DailyMenu from '../../comps/DailyMenu';
 
-
 export const getStaticPaths = async () => {
   const res = await fetch('https://openmensa.org/api/v2/canteens');
   const data = await res.json();
@@ -19,7 +18,7 @@ export const getStaticPaths = async () => {
     }
   })
 
-  
+
   return {
     paths,
     fallback: false
