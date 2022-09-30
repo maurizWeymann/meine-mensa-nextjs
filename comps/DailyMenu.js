@@ -52,9 +52,10 @@ const DailyMenu = () => {
 
     return (  
         <div>
-            <input type="text"
+            <input type="date"
             value={date}
-            onChange={(e) => setDate(e.target.value)}
+            onChange={(e) => {setDate(e.target.value)} }
+            
             
             />
             <button onClick={handleMenu}>Get Menu</button>

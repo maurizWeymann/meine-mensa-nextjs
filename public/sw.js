@@ -1,1 +1,114 @@
-if(!self.define){let e,s={};const a=(a,o)=>(a=new URL(a+".js",o).href,s[a]||new Promise((s=>{if("document"in self){const e=document.createElement("script");e.src=a,e.onload=s,document.head.appendChild(e)}else e=a,importScripts(a),s()})).then((()=>{let e=s[a];if(!e)throw new Error(`Module ${a} didn’t register its module`);return e})));self.define=(o,f)=>{const n=e||("document"in self?document.currentScript.src:"")||location.href;if(s[n])return;let c={};const i=e=>a(e,n),r={module:{uri:n},exports:c,require:i};s[n]=Promise.all(o.map((e=>r[e]||i(e)))).then((e=>(f(...e),c)))}}define(["./workbox-946f13af"],(function(e){"use strict";importScripts(),self.skipWaiting(),e.clientsClaim(),e.precacheAndRoute([{url:"/1.jpg",revision:"5f45975636231a6cd8668df263b4d69d"},{url:"/_next/static/chunks/framework-4556c45dd113b893.js",revision:"4556c45dd113b893"},{url:"/_next/static/chunks/main-e4de5d1a4535be6d.js",revision:"e4de5d1a4535be6d"},{url:"/_next/static/chunks/pages/404-3abf7f8d170fa24b.js",revision:"3abf7f8d170fa24b"},{url:"/_next/static/chunks/pages/_app-d1b0350caa7c96ac.js",revision:"d1b0350caa7c96ac"},{url:"/_next/static/chunks/pages/_error-a4ba2246ff8fb532.js",revision:"a4ba2246ff8fb532"},{url:"/_next/static/chunks/pages/about-3c0065ed1bc6cc63.js",revision:"3c0065ed1bc6cc63"},{url:"/_next/static/chunks/pages/index-07845bb0b424e8e1.js",revision:"07845bb0b424e8e1"},{url:"/_next/static/chunks/pages/mensaMitLocation-986e9a9069853606.js",revision:"986e9a9069853606"},{url:"/_next/static/chunks/pages/mensen-27fcd63c725d5d87.js",revision:"27fcd63c725d5d87"},{url:"/_next/static/chunks/pages/mensen/%5Bid%5D-f97fc28417314f1f.js",revision:"f97fc28417314f1f"},{url:"/_next/static/chunks/polyfills-c67a75d1b6f99dc8.js",revision:"837c0df77fd5009c9e46d446188ecfd0"},{url:"/_next/static/chunks/webpack-2e51481b1d484a05.js",revision:"2e51481b1d484a05"},{url:"/_next/static/css/b73b9a72cc6dbac0.css",revision:"b73b9a72cc6dbac0"},{url:"/_next/static/css/cbdc27ed230163ea.css",revision:"cbdc27ed230163ea"},{url:"/_next/static/fColVzVpP1Ja5UtKDuaUK/_buildManifest.js",revision:"bab10ac4bcee47da35d51c72f25b2b2e"},{url:"/_next/static/fColVzVpP1Ja5UtKDuaUK/_ssgManifest.js",revision:"b6652df95db52feb4daf4eca35380933"},{url:"/favicon.ico",revision:"c30c7d42707a47a3f4591831641e50dc"},{url:"/htw-logo.svg",revision:"758853421520ee2f8ec21743e56ded4a"},{url:"/icon-192x192.png",revision:"1cfc34ac7762d67ffb8a816ebc60f978"},{url:"/icon-256x256.png",revision:"a82bed31d2714a1ecfae90ef3feca398"},{url:"/icon-384x384.png",revision:"9edba8b66a3f1d632fba380e7ee06477"},{url:"/icon-512x512.png",revision:"eaf0728e377862584d11b74a0e12189e"},{url:"/logoHTW.jpeg",revision:"a1c7ca637598befdfd41e230cd341773"},{url:"/manifest.json",revision:"dec394a1e64def6377883e67bff6a901"},{url:"/maskable.png",revision:"29c106bf85d6876f32345bfd427c3c77"},{url:"/mensafotos/1.jpg",revision:"5f45975636231a6cd8668df263b4d69d"},{url:"/mensafotos/10.jpg",revision:"6426a70ef72140771bb0311c429ddc50"},{url:"/mensafotos/100.jpg",revision:"18ab7c3dfbc8c24a197b193e0a185c14"},{url:"/mensafotos/102.jpg",revision:"6acb4a85c80100ab91bbc92311636141"},{url:"/mensafotos/103.jpg",revision:"ab5c339e0eef3f6d669d82f59e90c3bd"},{url:"/mensafotos/105.jpg",revision:"8d4fc1b6a78189cbd20afe5590828c72"},{url:"/mensafotos/106.jpg",revision:"df1a2a6e9ae4d6f11d1a55a8706d65ce"},{url:"/mensafotos/109.jpg",revision:"edd2540662d581ba8d7fcf8532664a27"},{url:"/mensafotos/11.jpg",revision:"fda4f9edbff1420e3dffbea20fb010d9"},{url:"/mensafotos/110.jpg",revision:"5bf60042ca8659b7f4695fe8ed2023f2"},{url:"/mensafotos/111.jpg",revision:"650da25b880e3c5c4e7a2f38b8e81bad"},{url:"/mensafotos/112.jpg",revision:"a2dc069e4b7501c147593b8d6be207e9"},{url:"/mensafotos/113.jpg",revision:"142c0d133c5d8744dc736e61244a1046"},{url:"/mensafotos/114.jpg",revision:"1c8a59269a50f77b7f15af3011088601"},{url:"/mensafotos/115.jpg",revision:"c3c32062e32928668eea835523248e78"},{url:"/mensafotos/116.jpg",revision:"cfa5e3de307a6454aed1fb15dcc5bec7"},{url:"/mensafotos/118.jpg",revision:"1a9a1854d01c4375ea66a2e165cdad2c"},{url:"/mensafotos/119.jpg",revision:"e4fdf79c9681364694830a0028630b84"},{url:"/mensafotos/12.jpg",revision:"cba1ea02d710828ccfbdab12a038ccf4"},{url:"/mensafotos/121.jpg",revision:"154c00fb5564b9f4bc41b8985f8c5aa4"},{url:"/mensafotos/122.jpg",revision:"3f5812a51fa4476e081c608326fd7267"},{url:"/mensafotos/123.jfif",revision:"8089792a2f8487e250871f19cf7cbe33"},{url:"/mensafotos/124.jpg",revision:"2798ac406503921e7e3add2574d2b49f"},{url:"/mensafotos/125.jpg",revision:"c29ffa3f097310f9fd53e548895d7dc0"},{url:"/mensafotos/127.jpg",revision:"59a6b1d7661bcc95390e27be2f110d1c"},{url:"/mensafotos/128.jfif",revision:"f722c7b92b8716efec376b256e95b07b"},{url:"/mensafotos/129.jfif",revision:"66af12786cb5eb6ff9866e508a86aebd"},{url:"/mensafotos/13.jpg",revision:"165c22206fd46d2c3e7d06b751e590de"},{url:"/mensafotos/130.jfif",revision:"2813f6602c13b1fb37cfa63e0be7ce1c"},{url:"/mensafotos/1306.jpg",revision:"ab5c339e0eef3f6d669d82f59e90c3bd"},{url:"/mensafotos/131.jpg",revision:"0ac639c0ea5b1ad0446680de8c01eba1"},{url:"/mensafotos/132.jpg",revision:"5a9ddc6ba49a869958a63c52efaddafc"},{url:"/mensafotos/133.jpg",revision:"65e76ae56f14d04bf78f5aa36fbd7fc6"},{url:"/mensafotos/134.jfif",revision:"d6ec56a723a1aacbe629047569bccf7d"},{url:"/mensafotos/136.jpg",revision:"9da3b2601da707b2dd797bb39ca50002"},{url:"/mensafotos/137.jpg",revision:"81f39697dc237eeab2f8dc42bf592fb1"},{url:"/mensafotos/138.jpg",revision:"498052bf2ed0672910612dfc76aeb880"},{url:"/mensafotos/139.jpg",revision:"3a2f018ba5801f92fb02bc36b602a242"},{url:"/mensafotos/14.jpg",revision:"f222e76acd2f1d7aa95642a4bd74409a"},{url:"/mensafotos/15.jpg",revision:"b8e9f8f1fbb593a754c1bc85d5d6ef90"},{url:"/mensafotos/151.jpg",revision:"b72c92fd8725d29d743358540b99893d"},{url:"/mensafotos/152.jpg",revision:"709424889dbdc3eba7099eb006773ca6"},{url:"/mensafotos/16.jpg",revision:"bbf46d6a076124992d1891a0e5d31122"},{url:"/mensafotos/17.jfif",revision:"ac594deb13bc62e1ce92aa36bd75b6a5"},{url:"/mensafotos/2.jpg",revision:"8f71c1c4d7193aa1bd8003e4f444bb46"},{url:"/mensafotos/20.jpg",revision:"5325f97ad283952abd234d4ef61362f9"},{url:"/mensafotos/21.jpg",revision:"02beb4d64d33fe5f88a97ea528117a24"},{url:"/mensafotos/22.jpg",revision:"45645552b88eb75cf612931eab14146c"},{url:"/mensafotos/24.jpg",revision:"c5b5ce3a1f6bcd046a90c9105498a9ab"},{url:"/mensafotos/27.jpg",revision:"54c1045a412845521f1689307bd5cda6"},{url:"/mensafotos/29.jpg",revision:"e79c4fd387e758d766e6aa814fe3ede0"},{url:"/mensafotos/3.jpg",revision:"6735171e3a59fcc66147df1e310ba219"},{url:"/mensafotos/30.jpg",revision:"0f288aa66e6a1af2bcf315d568475835"},{url:"/mensafotos/31.jpg",revision:"ea1dbda7bcbaa48097353ed5220cce32"},{url:"/mensafotos/32.jpg",revision:"e970c4a0a8307f3f98728fad45c99f85"},{url:"/mensafotos/33.jpg",revision:"ea1dbda7bcbaa48097353ed5220cce32"},{url:"/mensafotos/34.jpg",revision:"c15142000cf0581bc74e18b0d4b0beb8"},{url:"/mensafotos/35.jpg",revision:"b6b619dc81fb407c54c9170d21ac7df4"},{url:"/mensafotos/36.jpg",revision:"799a0570f2273dbe107f93097c1fd4c3"},{url:"/mensafotos/39.jpg",revision:"39e74fabd055e5896a55a1b158f1aec4"},{url:"/mensafotos/4.jpg",revision:"c518174f47003eedd64dc91281a1ccdf"},{url:"/mensafotos/40.jpg",revision:"f459c5daef3edc0131919c36e90e88b8"},{url:"/mensafotos/42.jpg",revision:"5d251d31e038f4b10d8f8e5776c163b9"},{url:"/mensafotos/47.jpg",revision:"84e341921aa5fa55971b68688b8c1885"},{url:"/mensafotos/48.jpg",revision:"43c7cfcad54de8c004f048415e3ca6b7"},{url:"/mensafotos/49.jpg",revision:"a36c69b05a77e1ae9a91f172ef61ff01"},{url:"/mensafotos/5.jpg",revision:"078f9dffeacc023b895993bdc3b97387"},{url:"/mensafotos/50.jpg",revision:"20e3d5b391c949af241333e52d155af4"},{url:"/mensafotos/51.jpg",revision:"a5853d5a68578a8a782f1e5ec9aa9371"},{url:"/mensafotos/52.jpg",revision:"d4e25717b1b87b16715db7df2d77c42e"},{url:"/mensafotos/54.jpg",revision:"368a236a6b8226774a72ae207bb8dff2"},{url:"/mensafotos/55.jfif",revision:"2f90e6f26817df575cb9c78c814ecc51"},{url:"/mensafotos/563.jpg",revision:"6426a70ef72140771bb0311c429ddc50"},{url:"/mensafotos/565.jpg",revision:"02beb4d64d33fe5f88a97ea528117a24"},{url:"/mensafotos/57.jpg",revision:"a6809cfd947cf0d087e8a566f55a733f"},{url:"/mensafotos/576.jpg",revision:"9da3b2601da707b2dd797bb39ca50002"},{url:"/mensafotos/579.jpg",revision:"142c0d133c5d8744dc736e61244a1046"},{url:"/mensafotos/58.jpg",revision:"5f2ce43f525e8eb2f89bde3fffe4fbb1"},{url:"/mensafotos/59.jpg",revision:"c8c4365bc96642b4700c09e3eb99117e"},{url:"/mensafotos/6.jpg",revision:"165c22206fd46d2c3e7d06b751e590de"},{url:"/mensafotos/61.jpg",revision:"723dd07a7933986f5185f2ef6dc94a9c"},{url:"/mensafotos/62.jpg",revision:"227625fc5800207e92d343a5e84775b3"},{url:"/mensafotos/63.jpg",revision:"b72c92fd8725d29d743358540b99893d"},{url:"/mensafotos/64.jpg",revision:"3a1dc48690cdeb40c6b23c611406141d"},{url:"/mensafotos/65.jpg",revision:"b2ddb95fa808f5f661db98e8bc41bb4d"},{url:"/mensafotos/66.jpg",revision:"7cf23436a0b1a27884db84e00fe8c9a8"},{url:"/mensafotos/67.jpg",revision:"cc50d9fa27ea312e33c4306505ec90b0"},{url:"/mensafotos/68.jpg",revision:"a32cf4f4b2dc508f4e69c2ea1136cacb"},{url:"/mensafotos/69.jpg",revision:"3fa2a8e5f0a1c73d43fc3711764150ec"},{url:"/mensafotos/7.jpg",revision:"262ab8884ac705b5128a832981472b73"},{url:"/mensafotos/70.jpg",revision:"db561bbaaaa374bf7376c4c06f06139c"},{url:"/mensafotos/72.jpg",revision:"ced803174694eb7f65eb2e9469bf6764"},{url:"/mensafotos/74.jpg",revision:"ec9329cb52f4e9539daa8ad9d353e06d"},{url:"/mensafotos/75.jpg",revision:"494ed2522f5535be288eee92ccedec0b"},{url:"/mensafotos/76.jpg",revision:"7bf79e6b0593424ccfe4d71a9663c60a"},{url:"/mensafotos/78.jpg",revision:"b3ece13f780ba15ad204884eb014154d"},{url:"/mensafotos/79.jpg",revision:"7c2d86b178f8aba6b431bec3899264f7"},{url:"/mensafotos/8.jpg",revision:"2cb55c26a3bf2d40b480cec8b7647237"},{url:"/mensafotos/80.jpg",revision:"5a527fae3174e2f33f5b9a14d46b779a"},{url:"/mensafotos/81.jpg",revision:"17d427ab989718953ec5d03243149049"},{url:"/mensafotos/82.jpg",revision:"220001f28a2e108719262ae4316ed004"},{url:"/mensafotos/83.jpg",revision:"306fbba0a8b31526dcb4cacd4e3d5249"},{url:"/mensafotos/84.jpg",revision:"600ba7a3d55b0da4d7d1ce4858f05282"},{url:"/mensafotos/85.jpg",revision:"8176501875bed59356de716ab7846fd4"},{url:"/mensafotos/86.jpg",revision:"01af1683338b05c2af2e08b15b4c4577"},{url:"/mensafotos/87.jpg",revision:"11d8cc6d1f8c9fcad2afcc86467118a1"},{url:"/mensafotos/88.webp.crdownload",revision:"c8d994e2768e5f5c2176049c11cc9283"},{url:"/mensafotos/89.jpg",revision:"c1b0fc7583798858121697f48759d296"},{url:"/mensafotos/9.jpg",revision:"9585fede135003a594ceebd80930f375"},{url:"/mensafotos/90.jpg",revision:"74623efa19a8be8b34d1f7df50f8426a"},{url:"/mensafotos/91.jpg",revision:"d46f97552980a19648fc4d61adcac7c7"},{url:"/mensafotos/93.jpg",revision:"d365555fcfce4983dc78740ac2ffb7d4"},{url:"/mensafotos/94.jpg",revision:"c25dfd0f955407a1eff3455f345bfbb1"},{url:"/mensafotos/95.jpg",revision:"a987e0d91cfd28eb9b45c0f87b2d3e03"},{url:"/mensafotos/96.jpg",revision:"b4d8b60cccaf22f4caa9f235f292c5f2"},{url:"/mensafotos/97.jpg",revision:"aa6da83c459c06165d2d3115eaf8954d"},{url:"/mensafotos/98.jpg",revision:"3e96914c081a750ab6cd2007b1f981cc"},{url:"/mensafotos/99.jfif",revision:"0089e4b60062626088edd5c832b343ec"},{url:"/mensafotos/copy.jpg",revision:"5f45975636231a6cd8668df263b4d69d"},{url:"/vercel.svg",revision:"26bf2d0adaf1028a4d4c6ee77005e819"}],{ignoreURLParametersMatching:[]}),e.cleanupOutdatedCaches(),e.registerRoute("/",new e.NetworkFirst({cacheName:"start-url",plugins:[{cacheWillUpdate:async({request:e,response:s,event:a,state:o})=>s&&"opaqueredirect"===s.type?new Response(s.body,{status:200,statusText:"OK",headers:s.headers}):s}]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:gstatic)\.com\/.*/i,new e.CacheFirst({cacheName:"google-fonts-webfonts",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:31536e3})]}),"GET"),e.registerRoute(/^https:\/\/fonts\.(?:googleapis)\.com\/.*/i,new e.StaleWhileRevalidate({cacheName:"google-fonts-stylesheets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800})]}),"GET"),e.registerRoute(/\.(?:eot|otf|ttc|ttf|woff|woff2|font.css)$/i,new e.StaleWhileRevalidate({cacheName:"static-font-assets",plugins:[new e.ExpirationPlugin({maxEntries:4,maxAgeSeconds:604800})]}),"GET"),e.registerRoute(/\.(?:jpg|jpeg|gif|png|svg|ico|webp)$/i,new e.StaleWhileRevalidate({cacheName:"static-image-assets",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\/_next\/image\?url=.+$/i,new e.StaleWhileRevalidate({cacheName:"next-image",plugins:[new e.ExpirationPlugin({maxEntries:64,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:mp3|wav|ogg)$/i,new e.CacheFirst({cacheName:"static-audio-assets",plugins:[new e.RangeRequestsPlugin,new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:mp4)$/i,new e.CacheFirst({cacheName:"static-video-assets",plugins:[new e.RangeRequestsPlugin,new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:js)$/i,new e.StaleWhileRevalidate({cacheName:"static-js-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:css|less)$/i,new e.StaleWhileRevalidate({cacheName:"static-style-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\/_next\/data\/.+\/.+\.json$/i,new e.StaleWhileRevalidate({cacheName:"next-data",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute(/\.(?:json|xml|csv)$/i,new e.NetworkFirst({cacheName:"static-data-assets",plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;const s=e.pathname;return!s.startsWith("/api/auth/")&&!!s.startsWith("/api/")}),new e.NetworkFirst({cacheName:"apis",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:16,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>{if(!(self.origin===e.origin))return!1;return!e.pathname.startsWith("/api/")}),new e.NetworkFirst({cacheName:"others",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:86400})]}),"GET"),e.registerRoute((({url:e})=>!(self.origin===e.origin)),new e.NetworkFirst({cacheName:"cross-origin",networkTimeoutSeconds:10,plugins:[new e.ExpirationPlugin({maxEntries:32,maxAgeSeconds:3600})]}),"GET")}));
+/**
+ * Copyright 2018 Google Inc. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+// If the loader is already loaded, just stop.
+if (!self.define) {
+  let registry = {};
+
+  // Used for `eval` and `importScripts` where we can't get script URL by other means.
+  // In both cases, it's safe to use a global var because those functions are synchronous.
+  let nextDefineUri;
+
+  const singleRequire = (uri, parentUri) => {
+    uri = new URL(uri + ".js", parentUri).href;
+    return registry[uri] || (
+      
+        new Promise(resolve => {
+          if ("document" in self) {
+            const script = document.createElement("script");
+            script.src = uri;
+            script.onload = resolve;
+            document.head.appendChild(script);
+          } else {
+            nextDefineUri = uri;
+            importScripts(uri);
+            resolve();
+          }
+        })
+      
+      .then(() => {
+        let promise = registry[uri];
+        if (!promise) {
+          throw new Error(`Module ${uri} didn’t register its module`);
+        }
+        return promise;
+      })
+    );
+  };
+
+  self.define = (depsNames, factory) => {
+    const uri = nextDefineUri || ("document" in self ? document.currentScript.src : "") || location.href;
+    if (registry[uri]) {
+      // Module is already loading or loaded.
+      return;
+    }
+    let exports = {};
+    const require = depUri => singleRequire(depUri, uri);
+    const specialDeps = {
+      module: { uri },
+      exports,
+      require
+    };
+    registry[uri] = Promise.all(depsNames.map(
+      depName => specialDeps[depName] || require(depName)
+    )).then(deps => {
+      factory(...deps);
+      return exports;
+    });
+  };
+}
+define(['./workbox-eac1af49'], (function (workbox) { 'use strict';
+
+  /**
+  * Welcome to your Workbox-powered service worker!
+  *
+  * You'll need to register this file in your web app.
+  * See https://goo.gl/nhQhGp
+  *
+  * The rest of the code is auto-generated. Please don't update this file
+  * directly; instead, make changes to your Workbox build configuration
+  * and re-run your build process.
+  * See https://goo.gl/2aRDsh
+  */
+
+  importScripts();
+  self.skipWaiting();
+  workbox.clientsClaim();
+  workbox.registerRoute("/", new workbox.NetworkFirst({
+    "cacheName": "start-url",
+    plugins: [{
+      cacheWillUpdate: async ({
+        request,
+        response,
+        event,
+        state
+      }) => {
+        if (response && response.type === 'opaqueredirect') {
+          return new Response(response.body, {
+            status: 200,
+            statusText: 'OK',
+            headers: response.headers
+          });
+        }
+
+        return response;
+      }
+    }]
+  }), 'GET');
+  workbox.registerRoute(/.*/i, new workbox.NetworkOnly({
+    "cacheName": "dev",
+    plugins: []
+  }), 'GET');
+
+}));
+//# sourceMappingURL=sw.js.map

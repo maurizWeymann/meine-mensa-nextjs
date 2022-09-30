@@ -22,15 +22,15 @@ import styles from '../styles/Home.module.css'
   
 const pages = [
   {
-    title: 'Home',
+    title: 'In der Nähe',
     href : '/'  
   }, 
   {
-    title: 'Mensen',
+    title: 'Alle Mensen',
     href : '/mensen'
   }, 
   {
-    title: 'About',
+    title: 'Studenten',
     href : '/about'
   }
 ];

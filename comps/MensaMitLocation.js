@@ -1,7 +1,11 @@
 import Head from 'next/head'
-import Link from "next/link";
-import Image from 'next/image';
+import Image from 'next/image'
 
+import styles from '../styles/Home.module.css'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
+
+// test
 import Card from '@mui/material/Card';
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
@@ -15,13 +19,6 @@ import Grid from '@mui/material/Unstable_Grid2';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 
-export const getStaticProps = async () => {
-    const res = await fetch('https://openmensa.org/api/v2/canteens');
-    const data = await res.json();
-    
-    return { props: { mensen: data} }
-}
-
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
     ...theme.typography.body2,
@@ -32,27 +29,56 @@ const Item = styled(Paper)(({ theme }) => ({
 
 
 
+const Mensen = () => {
 
-const Mensen = ({mensen}) => {
+    const [mensen, setMensen] = useState([]);
+    const [location, setLocation] = useState();
+
+    const fetchApiData = async ({ latitude, longitude }) => {
+        const res = await fetch(`https://openmensa.org/api/v2/canteens?near[lat]=${latitude}&near[lng]=${longitude}&near[dist]=5`);
+        const data = await res.json();
+        setMensen(data);
+    };
+
+    useEffect(() => {
+        if('geolocation' in navigator) {
+            // Retrieve latitude & longitude coordinates from `navigator.geolocation` Web API
+            navigator.geolocation.getCurrentPosition(({ coords }) => {
+                const { latitude, longitude } = coords;
+                setLocation({ latitude, longitude });
+            })
+        }
+    }, []);
+
+    useEffect(() => {
+        // Fetch data from API if `location` object is set
+        if (location) {
+            fetchApiData(location);
+        }
+    }, [location]);
     
     return ( 
-        <>
-        <Head>
-            <title>HTW Mensa | Mensen</title>
-            <meta name="keywords" content="mensa"/>
-        </Head>
+      <>
+      
+      <Head>
+        <title>HTW Mensa | Home</title>
+        <meta name="keywords" content="mensa"/>
+      </Head>
+      <div>
+        
+        <Link href='/mensen'><a className={styles.btn}>Liste Aller Mensen</a></Link>
+      </div>
+
+        
         <div>
-            <h1>Alle Mensen</h1>
-            <p>Alle Mensen</p>
-           
+            <h1>Mensen in der Nähe</h1>
+
             <Box sx={{ width: '100%' }}>
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-                
-     
-                {mensen.slice(0,25).map(mensa => ( 
+            
+                {mensen?.length > 0 && mensen.map(mensa => ( 
 
-                    
-                <Link href ={'/mensen/' + mensa.id} key={mensa.id}>
+                <Link href={`/mensen/${mensa.id}`} key={mensa.id}>
                     <Grid xs={6}>
                         <Card sx={{ maxWidth: 1024 }}>
                             <CardMedia
@@ -74,16 +100,16 @@ const Mensen = ({mensen}) => {
                                 <Button size="small">Learn More</Button>
                             </CardActions>
                         </Card>
+                     
                     </Grid>
-                </Link>    
-
-                ))}
+                    
+                </Link>
+            ))}
             </Grid>
             </Box>
         </div>
-        </>
-     );
-}
-// index.js will create route to the root page
- 
+      </>
+    );
+};
+
 export default Mensen;

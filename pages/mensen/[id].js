@@ -18,7 +18,6 @@ export const getStaticPaths = async () => {
     }
   })
 
-
   return {
     paths,
     fallback: false
@@ -41,7 +40,7 @@ const Details = ({ mensa }) => {
       <Card sx={{ maxWidth: 1024 }}>
       <CardMedia
         component="img"
-        height="180"
+        height="400"
         image={`/mensafotos/${mensa.id}.jpg`}
         alt={mensa.name}
         />
